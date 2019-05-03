@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<%= render partial: "snippets/summary", locals: {snippet: @snippet} %>
+</p>
+
+
+<% if false %>
+<div>
+	debug info
+	<p>
+		<%= @snippet.audio.url.to_s %>
+	</p>
+</div>
+<% end %>
+
+<% if false %>
+<%= audio_tag @snippet.audio.url.to_s , class: "audio-play" %>
+<p class="btn btn-primary audioButton">Play</p>
+<% end %>
+
+<%#= link_to 'Edit', edit_snippet_path(@snippet) %>
+<%#= link_to 'Back', snippets_path %>
+<%#= link_to 'Back', snippets_path %>
+<%= link_to 'Home', "/" %>

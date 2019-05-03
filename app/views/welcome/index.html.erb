@@ -1,0 +1,54 @@
+<h1>Welcome To The Speech-To-Text Demo</h1>
+<p>
+	This is a Mozilla Deep Speech Pre Trained Model: A <b>TensorFlow</b> implementation of Baidu's DeepSpeech architecture - using a RNN A recurrent neural network (RNN).
+	
+</p>
+
+
+<h2>Some Example Audio Speech To Text Transcriptiopn</h2>
+
+<p>
+	<% @snippets.each do |s| %>
+		<%= render partial: "snippets/summary", locals: {snippet: s} %>
+		
+	<% end %>
+</p>
+
+
+<h2>Try It Out!</h2>
+<p>
+But before you upload, you need to create a short audio wave file.  Ideally less than 5 seconds for immediate feedback.	
+</p>
+<h2> Important before you try it out</h2>
+<p>
+	Currently, only 16-bit, 16 kHz, mono-channel WAVE audio files are supported
+</p>
+<h2> Instructions for creating 16 bit bh kHz, mono-channel wave audio files on Macs</h2>
+
+<p>
+Step 1.  Create a short audio file using quick time.  Save in any format.
+
+</p>
+<p> 
+Step 2.  Follow these instructions to convert to 16-bit, 16 kHz, mono-channel
+<%= link_to "https://support.tunecore.com/hc/en-us/articles/115006685288-How-to-convert-your-audio-files-to-the-required-format-using-iTunes-on-your-computer", "https://support.tunecore.com/hc/en-us/articles/115006685288-How-to-convert-your-audio-files-to-the-required-format-using-iTunes-on-your-computer" %>
+</p>
+
+<p> 
+Step 3.  click here to give it a go
+<%= link_to "here", "/snippets/new" %>
+</p>
+
+
+<h2>Other Notes</h2>
+
+<p>
+Supervised learning requires data, lots and lots of it. Training a model like Deep Speech requires thousands of hours of labeled audio, and obtaining and preparing this data can be as much work, if not more, as implementing the network and the training logic.
+	
+</p>
+<p>
+Info available <%= link_to "here", "https://github.com/mozilla/DeepSpeech" %>	
+</p>
+<p>
+<%= link_to 'All Test Snippets', snippets_path %>
+</p>
